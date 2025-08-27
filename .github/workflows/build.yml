@@ -15,6 +15,8 @@ jobs:
               with:
                 cmake-version: '3.10.*'
 
+            - name: Configure the build
+              run: cmake -B build
+
             - name: Build the program
-              run: cmake -B build \
-                cmake --build build --config RelWithDebInfo
+              run: cmake --build build --config RelWithDebInfo
