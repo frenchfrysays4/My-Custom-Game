@@ -9,12 +9,16 @@ project(CustomGame VERSION 0.0.1)
 
 # Set Executable name (ProjectName(CustomGame)-vVERSION(0.0.1))
 add_executable(${PROJECT_NAME}-v${PROJECT_VERSION}
-    # C++ Code (.hpp and .h files are linked from these files
+    # C++ Code that will go into the .exe file
+    # (.hpp and .h files are linked from these files
     # meaning that they get added even though they aren't 
     # specified here)
     src/executable/main.cpp
 )
 
-add_library(${PROJECT_NAME}-v${PROJECT_VERSION}library1
+add_library(${PROJECT_NAME}-v${PROJECT_VERSION}library1 SHARED
+    # C++ Code that will go into the .dll file
+    # (.hpp and .h files are called by these files so they get added
+    # even thogh they arent specified)
     src/libraries/library.cpp
 )
