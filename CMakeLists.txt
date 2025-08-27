@@ -13,5 +13,8 @@ add_executable(${PROJECT_NAME}-v${PROJECT_VERSION}
     # meaning that they get added even though they aren't 
     # specified here)
     src/executable/main.cpp
+)
+
+add_library(${PROJECT_NAME}-v${PROJECT_VERSION}library1
     src/libraries/library.cpp
 )
