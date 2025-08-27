@@ -8,7 +8,7 @@ on:
 
 jobs:
     setupJob:
-        runs-on: self-hosted-linux
+        runs-on: ubuntu-latest
         steps:
             - name: Make Build Directory
               run: mkdir build
@@ -18,7 +18,7 @@ jobs:
               with:
                 repository: "frenchfrysays3/my-custom-game"
     buildOnLinux:
-        runs-on: self-hosted-linux
+        runs-on: ubuntu-latest
         needs: setupJob
         steps:
             - name: Setup Cmake version 3.10
